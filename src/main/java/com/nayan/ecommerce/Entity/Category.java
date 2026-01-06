@@ -1,6 +1,5 @@
 package com.nayan.ecommerce.Entity;
 
-import com.nayan.ecommerce.Entity.enums.ProductStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,16 +8,16 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "products")
-public class Product {
+@Table(name = "categories")
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,22 +26,11 @@ public class Product {
     @Column(nullable = false)
     private String name;
 
-    @Column(length = 1000)
+    @Column(length = 500)
     private String description;
 
-    @Column(nullable = false , precision = 10 , scale = 2)
-    private BigDecimal price;
-
-    @Column(nullable = false)
-    private Integer StockQuantity;
-
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private ProductStatus status;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id" , nullable = false)
-    private Category category;
+    @OneToMany(mappedBy = "category")
+    private List<Product> product;
 
     @CreationTimestamp
     @Column(nullable = false , updatable = false)
