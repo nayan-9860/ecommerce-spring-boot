@@ -1,4 +1,4 @@
-package com.nayan.ecommerce.Entity.enums;
+package com.nayan.ecommerce.entity.enums;
 
 public enum ProductStatus {
 

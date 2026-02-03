@@ -1,6 +1,6 @@
-package com.nayan.ecommerce.Entity;
+package com.nayan.ecommerce.entity;
 
-import com.nayan.ecommerce.Entity.enums.ProductStatus;
+import com.nayan.ecommerce.entity.enums.ProductStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

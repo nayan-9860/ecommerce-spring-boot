@@ -1,11 +1,12 @@
-package com.nayan.ecommerce.Entity;
+package com.nayan.ecommerce.entity;
 
-import com.nayan.ecommerce.Entity.enums.UserRole;
+import com.nayan.ecommerce.entity.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -18,7 +19,7 @@ import java.time.LocalDateTime;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
@@ -34,6 +35,7 @@ public class User {
     @Column(nullable = false)
     private UserRole role;
 
+    @CreationTimestamp
     @Column(nullable = false , updatable = false)
     private LocalDateTime createdAt;
 }

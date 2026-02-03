@@ -1,4 +1,4 @@
-package com.nayan.ecommerce.Entity;
+package com.nayan.ecommerce.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
