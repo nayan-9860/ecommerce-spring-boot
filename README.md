@@ -51,9 +51,9 @@ src/main/java/com/nayan/ecommerce/
 
 ---
 
-# Getting Started
+## Getting Started
 
-# Prerequisites
+### Prerequisites
 
 - Java 24+
 - Maven
@@ -67,20 +67,24 @@ src/main/java/com/nayan/ecommerce/
 git clone https://github.com/nayan-9860/ecommerce-spring-boot.git
 cd ecommerce-spring-boot
 
-## Run the Application
+```
+
+### Run the Application
+```
 mvn clean install
 mvn spring-boot:run
 
-
+```
 ### Authentication & Authorization
 
 This project uses JWT-based authentication.
 
 Auth Endpoints
 
-Method  Endpoint	           Description
-POST	  /api/auth/register	 Register new user
-POST	  /api/auth/login	       Login and get JWT token
+Method    Endpoint	              Description
+-------|------------------------|---------------------
+POST	  |  /api/auth/register	   | Register new user
+POST	  |  /api/auth/login	      | Login and get JWT token
 
 After login, include the token in headers:
 Authorization: Bearer <JWT_TOKEN>
@@ -88,25 +92,27 @@ Authorization: Bearer <JWT_TOKEN>
  📦 API Endpoints Overview
 
 Products
-Method	  Endpoint	         Access
-GET	      /api/products	      Public
-POST	    /api/products	      ADMIN
-PUT	      /api/products/{id}	ADMIN
-DELETE	  /api/products/{id}	ADMIN
+Method	     Endpoint	            Access
+--------|----------------------|------------
+GET	    |  /api/products	      |  Public
+POST	   |  /api/products	      |  ADMIN
+PUT	    |  /api/products/{id}	 |  ADMIN
+DELETE	 |  /api/products/{id}	 |  ADMIN
 
 
 Cart
-
-Method	   Endpoint
-POST	     /api/cart/add
-PUT	       /api/cart/update
-DELETE	   /api/cart/remove
-GET	       /api/cart
+Method	     Endpoint
+---------|-----------------------
+POST	    |   /api/cart/add
+PUT	     |   /api/cart/update
+DELETE	  |   /api/cart/remove
+GET	     |   /api/cart
 
 Orders
-Method	   Endpoint
-POST	     /api/orders
-GET	       /api/orders
+Method	     Endpoint
+---------|----------------
+POST	    |   /api/orders
+GET	     |   /api/orders
 
 🗄️ Database Configuration
 
@@ -145,27 +151,18 @@ Secure password storage using BCrypt
 .gitignore configured to exclude build files and secrets
 
 🚧 Future Enhancements
-Payment gateway integration
-Swagger / OpenAPI documentation
-Product reviews and ratings
-Admin dashboard
-Pagination and filtering
+- [ ] Payment gateway integration
+- [ ] Swagger / OpenAPI documentation
+- [ ] Product reviews and ratings
+- [ ] Admin dashboard
+- [ ] Pagination and filtering
 
 
 👤 Author
 Nayan Joshi
 GitHub: https://github.com/nayan-9860
+Email: nayanjoshi9860@gmail.com
+
 ⭐ If you find this project useful, feel free to star the repository!
 
----
-
-## ✅ What You Should Do Next (Important)
-
-1. Create `README.md` in project root
-2. Paste this content
-3. Commit & push:
-```bash
-git add README.md
-git commit -m "Add professional README"
-git push
-
+ 
